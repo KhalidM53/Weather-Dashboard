@@ -4,7 +4,7 @@ var cities = [""];
      event.preventDefault()
     var city = $("#search-value").val();
     // queryURL is the url we'll use to query the API//
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=a12313c51c2009dc1f1a2d65537b6ca5";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=a12313c51c2009dc1f1a2d65537b6ca5";
 
     $.ajax({
         url: queryURL,
@@ -34,7 +34,7 @@ var cities = [""];
            $("#display-windspeed").prepend("Wind Speed: ").append(wind).append("MPH");
            
 
-        var uvURL = "http://api.openweathermap.org/data/2.5/uvi?lat="+ lat +"&lon="+ lon +"&APPID=a12313c51c2009dc1f1a2d65537b6ca5";
+        var uvURL = "https://api.openweathermap.org/data/2.5/uvi?lat="+ lat +"&lon="+ lon +"&APPID=a12313c51c2009dc1f1a2d65537b6ca5";
            $.ajax({
             url: uvURL,
             method: "GET"
@@ -45,7 +45,7 @@ var cities = [""];
 
 
         
-        var fiveDayURL = "http://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=imperial&APPID=a12313c51c2009dc1f1a2d65537b6ca5"
+        var fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=imperial&APPID=a12313c51c2009dc1f1a2d65537b6ca5"
         $.ajax({
             url: fiveDayURL,
             method: "GET"
